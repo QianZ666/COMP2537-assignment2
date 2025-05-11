@@ -1,0 +1,28 @@
+<%- include('templates/header') %>
+<form action="/loggingin" method="post" class="container my-5" style="max-width: 400px;">
+    <div class="mb-3">
+      <h2 class="text-center mb-4">Login</h2>
+      <label for="username" class="form-label">Username</label>
+      <input 
+        name="username" 
+        type="text" 
+        class="form-control" 
+        id="username" 
+        placeholder="Enter username" 
+        value="<%= username || '' %>">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input 
+        name="password" 
+        type="password" 
+        class="form-control" 
+        id="password" 
+        placeholder="Enter password">
+    </div>
+  
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+  </form>
+  
+
+<%- include('templates/footer') %>

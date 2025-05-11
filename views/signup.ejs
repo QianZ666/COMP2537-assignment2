@@ -1,0 +1,27 @@
+<%- include('templates/header') %>
+
+<form action="/submitUser" method="post" class="w-50 mx-auto">
+  <div class="mb-3">
+    <h2 class="mb-4">Create User</h2>
+    <input name="username" type="text" class="form-control" placeholder="Username">
+    <% if (missingUserName) { %>
+      <div class="form-text text-danger">Name is required</div>
+    <% } %>
+  </div>
+
+  <div class="mb-3">
+    <input name="email" type="text" class="form-control" placeholder="Email">
+    <% if (missingEmail) { %>
+      <div class="form-text text-danger">Email is required</div>
+    <% } %>
+  </div>
+
+  <div class="mb-3">
+    <input name="password" type="password" class="form-control" placeholder="Password">
+    <% if (missingPassword) { %>
+      <div class="form-text text-danger">Password is required</div>
+    <% } %>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<%- include('templates/footer') %>

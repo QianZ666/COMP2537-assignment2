@@ -1,0 +1,9 @@
+<% if (error === 'invalid_credentials') { %>
+    <p style="color:red;">Invalid username or password</p>
+<% } else if (error === 'missing_fields') { %>
+    <p style="color:red;">Please provide both username and password</p>
+<% } else if (error === 'validation_error') { %>
+    <p style="color:red;">Invalid input format</p>
+<% } %>
+
+<p><a href='/login'>Try again</a></p>

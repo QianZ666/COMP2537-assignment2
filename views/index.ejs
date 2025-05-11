@@ -1,0 +1,30 @@
+<%- include('templates/header') %>
+<div class="container mt-5">
+    <% if (username) { %>
+      <div class="card shadow p-4">
+        <h3 class="mb-3">Hello, <%= username %>!</h3>
+        <div class="d-flex gap-2">
+          <form action="/members" method="get">
+            <button class="btn btn-primary">Go to Members Area</button>
+          </form>
+          <form action="/logout" method="get">
+            <button class="btn btn-danger">Logout</button>
+          </form>
+        </div>
+      </div>
+    <% } else { %>
+      <div class="card shadow p-4">
+        <h3 class="mb-3">Welcome!</h3>
+        <div class="d-flex gap-2">
+          <form action="/signup" method="get">
+            <button class="btn btn-success">Sign Up</button>
+          </form>
+          <form action="/login" method="get">
+            <button class="btn btn-primary">Log In</button>
+          </form>
+        </div>
+      </div>
+    <% } %>
+  </div> 
+<%- include('templates/footer') %>
+
