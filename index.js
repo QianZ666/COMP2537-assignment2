@@ -73,7 +73,7 @@ function isAdmin(req, res, next){
       username:req.session.username }).then(user => {
         if (user?.user_type ==="admin")
           return next();
-        res.status(403).send("You are not authorized to view this page.");
+        res.status(403).send("403 Error-You are not authorized to view this page.");
       }).catch(err=> {
         res.status(500).send("Internal Server Error");
       });
